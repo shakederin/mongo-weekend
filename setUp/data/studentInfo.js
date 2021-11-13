@@ -1,4 +1,4 @@
-const data = [
+const studentData = [
    {name : "Ido",
     surName : "Arbel",
     birth : "1998/01/26",
@@ -53,4 +53,4 @@ const data = [
     }
 ]
 
-module.exports = data;
+module.exports = studentData;

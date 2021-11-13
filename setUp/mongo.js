@@ -1,4 +1,7 @@
-const data = require("./studentInfo");
+const studentData = require("./data/studentInfo");
+// const postsData = require("./data/postsData");
+const usersData = require("./data/usersData");
+const commentsData = require("./data/commentsData");
 const Student = require("./schema");
 const Post = require("./schema")
 const User = require("./schema")
@@ -21,7 +24,7 @@ Mongoose.connect(connectionString)
 /*************************ADD STUDENTS */
 
 
-// Student.insertMany(data)
+// Student.insertMany(studentData)
 // .then(()=>{
 //     console.log("add");
 //         Mongoose.connection.close();
@@ -30,4 +33,28 @@ Mongoose.connect(connectionString)
 //     console.log(err);
 // });
 
-/**************************** */
+/*************************ADD PostS */
+
+// Post.insertMany(postsData)
+// .then(()=>{
+//     console.log("add");
+//     Mongoose.connection.close();
+// })
+// .catch((err)=>{
+//     console.log(err);
+// });
+
+
+
+/*************************ADD UserS */
+
+User.insertMany(usersData)
+.then(()=>{
+    console.log("add");
+    Mongoose.connection.close();
+})
+.catch((err)=>{
+    console.log(err);
+});
+
+/*************************ADD CommentS*/

@@ -11,8 +11,8 @@ const StudentSchema = new Mongoose.Schema({
 
 const userSchema = new Mongoose.Schema({
     username : String,
-    first_name : String,
-    last_name : String
+    firstname : String,
+    lastname : String
 })
 
 const postsSchema = new Mongoose.Schema({
@@ -32,9 +32,8 @@ const User = Mongoose.model("User", userSchema);
 const Post = Mongoose.model("Post", postsSchema);
 const Comment = Mongoose.model("comment", commentsSchema);
 
-module.exports = {
-    Student,
-    User,
-    Post,
-    Comment
-}
+module.exports = Student
+module.exports = User
+module.exports = Post
+module.exports = Comment
+   
