@@ -1,9 +1,9 @@
-const {Student, Post, User, Comment} = require("./schema");
+const {Student, Post, User, Comment, Question} = require("./schema");
 const studentData = require("./data/studentInfo");
 const usersData = require("./data/usersData");
 const postsData = require("./data/postsData");
 const commentsData = require("./data/commentsData");
-
+const questionsData = require("./data/questionsData")
 
 
 // const connectionString = process.env.CONNENTIONSTRING;
@@ -54,9 +54,20 @@ const commentsData = require("./data/commentsData");
 
 /*************************ADD CommentS*/
 
-Comment.insertMany(commentsData)
+// Comment.insertMany(commentsData)
+// .then(()=>{
+//     console.log("add comments");
+// })
+// .catch((err)=>{
+//     console.log(err);
+// });
+
+
+/*************************ADD Questions*/
+
+Question.insertMany(questionsData)
 .then(()=>{
-    console.log("add comments");
+    console.log("add questions");
 })
 .catch((err)=>{
     console.log(err);
