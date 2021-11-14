@@ -1,34 +1,34 @@
-const {Post, User, Comment }= require("../setUp/schema");
+const {Post, User, Comment, Question }= require("../setUp/schema");
 
 async function findAllUsers(){
     const allUsers = await User.find({});
     return(allUsers);
 }
 
-// findAllUsers()
+// findAllUsers()                                              // find all users
 
-async function findAllPosts(query){
-    const allPosts = await Post.find(query);
+async function findAllPosts(query){                                     
+    const allPosts = await Post.find(query);                                            
     console.log(allPosts);
     return(allPosts);
 }
 
-// findAllPosts()
+// findAllPosts()                                             // find all posts     
 
-// findAllPosts({username : "GoodGuyGreg"})
+// findAllPosts({username : "GoodGuyGreg"})                   // find all posts username = "GoodGuyGreg"                 
 
-// findAllPosts({username : "ScumbagSteve"})
+// findAllPosts({username : "ScumbagSteve"})                  // find all posts username = "ScumbagSteve"                           
 
 async function findAllComments(query){
     const allComments = await Comment.find(query);
     console.log(allComments);
 }
 
-// findAllComments();
+// findAllComments();                                        // find all comments                   
 
-// findAllComments({username : "GoodGuyGreg"});
+// findAllComments({username : "GoodGuyGreg"});              // find all comments username = "GoodGuyGreg"                        
 
-// findAllComments({username : "ScumbagSteve"});
+// findAllComments({username : "ScumbagSteve"});             // find all comments username = "ScumbagSteve"                      
 
 
 
@@ -40,4 +40,4 @@ async function findAllPostsFromTitle(query){
     return(array);
 }
 
-// findAllPostsFromTitle("Reports a bug in your code")
+// findAllPostsFromTitle("Reports a bug in your code")       //                                

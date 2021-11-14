@@ -40,6 +40,15 @@ const postsSchema = new Mongoose.Schema({
 
 const Post = Mongoose.model("Post", postsSchema);
 
+const questionsSchema = new Mongoose.Schema({
+    title : String,
+    correctAnswer :String,
+    answers : [String],
+    difficulty: Number
+})
+
+const Question = Mongoose.model("Question", questionsSchema)
+
 const commentsSchema = new Mongoose.Schema({
     username : String,
     comment : String,
@@ -52,6 +61,7 @@ module.exports = {
     Student,
     User,
     Post,
-    Comment
+    Comment,
+    Question
 }
 
