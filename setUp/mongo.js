@@ -1,24 +1,21 @@
+const {Student, Post, User, Comment} = require("./schema");
 const studentData = require("./data/studentInfo");
-// const postsData = require("./data/postsData");
 const usersData = require("./data/usersData");
+const postsData = require("./data/postsData");
 const commentsData = require("./data/commentsData");
-const Student = require("./schema");
-const Post = require("./schema")
-const User = require("./schema")
-const Comment = require("./schema")
-const  Mongoose  = require("mongoose");
-require("dotenv").config();
-
-const connectionString = process.env.CONNENTIONSTRING;
 
 
-Mongoose.connect(connectionString)
-.then(()=>{
-    console.log("DB connected")
-})
-.catch((error)=>{
-    'error connecting to MongoDB:', error.message
-});
+
+// const connectionString = process.env.CONNENTIONSTRING;
+
+
+// Mongoose.connect(connectionString)
+// .then(()=>{
+//     console.log("DB connected")
+// })
+// .catch((error)=>{
+//     'error connecting to MongoDB:', error.message
+// });
 
 
 /*************************ADD STUDENTS */
@@ -38,7 +35,6 @@ Mongoose.connect(connectionString)
 // Post.insertMany(postsData)
 // .then(()=>{
 //     console.log("add");
-//     Mongoose.connection.close();
 // })
 // .catch((err)=>{
 //     console.log(err);
@@ -48,13 +44,20 @@ Mongoose.connect(connectionString)
 
 /*************************ADD UserS */
 
-User.insertMany(usersData)
+// User.insertMany(usersData)
+// .then(()=>{
+//     console.log("add users");
+// })
+// .catch((err)=>{
+//     console.log(err);
+// });
+
+/*************************ADD CommentS*/
+
+Comment.insertMany(commentsData)
 .then(()=>{
-    console.log("add");
-    Mongoose.connection.close();
+    console.log("add comments");
 })
 .catch((err)=>{
     console.log(err);
 });
-
-/*************************ADD CommentS*/
