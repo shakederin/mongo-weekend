@@ -43,5 +43,5 @@ async function findAllPostsFromTitle(query){
 // findAllPostsFromTitle("Reports a bug in your code")       //                                
 
 
-/*******************************BONUS************************************************** */
+
 
